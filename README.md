@@ -1,5 +1,4 @@
-# crud-nodejs-mongodb
-CRUD, Express and MongoDB
+# CRUD, Express and MongoDB
 
 # To run
 ## Local (development)
