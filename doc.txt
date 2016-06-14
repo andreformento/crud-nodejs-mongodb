@@ -1,0 +1,5 @@
+Tutorial
+http://zellwk.com/blog/crud-express-mongodb/
+
+Mongo
+https://www.airpair.com/javascript/complete-expressjs-nodejs-mongodb-crud-skeleton

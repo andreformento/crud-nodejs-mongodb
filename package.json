@@ -1,0 +1,32 @@
+{
+  "name": "crud-nodejs-mongodb",
+  "version": "1.0.0",
+  "description": "CRUD, Express and MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreformento/crud-nodejs-mongodb.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Andre Formento",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreformento/crud-nodejs-mongodb/issues"
+  },
+  "homepage": "https://github.com/andreformento/crud-nodejs-mongodb#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "ejs": "^2.4.2",
+    "express": "^4.13.4",
+    "mongodb": "^2.1.18"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2"
+  }
+}

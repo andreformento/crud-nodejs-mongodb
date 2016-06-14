@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>List</title>
+</head>
+<body>
+  Formento's App
+
+  <form action="/quotes" method="POST">
+    <input type="text" placeholder="Name" name="name">
+    <input type="text" placeholder="Quote" name="quote">
+    <button type="submit">Submit</button>
+  </form>
+
+  <ul class="quotes">
+  <% for(var i=0; i<quotes.length; i++) {%>
+    <li class="quote">
+      <span><strong><%= quotes[i].name %></strong></span>
+      <span><%= quotes[i].quote %></span>
+    </li>
+  <% } %>
+  </ul>
+
+</body>
+</html>
