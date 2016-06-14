@@ -1,15 +1,15 @@
 # CRUD, Express and MongoDB
 
-# To run
-## Local (development)
+## To run
+### Local (development)
 * npm install
 * npm run dev
 
-## Remote (production)
+### Remote (production)
 * npm install
 * npm start
 
-# Requirements
+## Requirements
 * npmjs
 * NodeJS
 * MongoDB
