@@ -4,6 +4,7 @@
 ### Local (development)
 * npm install
 * npm run dev
+* Access: `http://localhost:3000`
 
 ### Remote (production)
 * npm install
