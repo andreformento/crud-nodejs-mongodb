@@ -21,6 +21,8 @@ app.set('view engine', 'ejs');
 
 // handlers
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+app.use(express.static('public'));
 
 // routes
 app.get('/', (req, res) => {
@@ -40,4 +42,22 @@ app.post('/quotes', (req, res) => {
     console.log('saved to database')
     res.redirect('/')
   });
+});
+
+app.put('/quotes', (req, res) => {
+  db.collection('quotes')
+  .findOneAndUpdate({name: 'subs'}, {
+    $set: {
+      name: req.body.name,
+      quote: req.body.quote
+    }
+  }, {
+    sort: {_id: -1},
+    upsert: true
+  }, (err, result) => {
+    if (err) return res.send(err);
+    // res.send(result);
+    console.log(result);
+	res.redirect('/');
+  })
 });
