@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 // const db = require('./config/db');
 const mongodb = require('mongodb'); //mongo connection
 const MongoClient = mongodb.MongoClient;
+const ObjectID = require("mongodb").ObjectID;
 const app = express();
 
 var db;
@@ -34,15 +35,21 @@ app.get('/', (req, res) => {
 });
 
 app.post('/quotes', (req, res) => {
-  console.log(req.body);
-
   db.collection('quotes').save(req.body, (err, result) => {
     if (err) return console.log(err)
 
     console.log('saved to database')
     res.redirect('/')
   });
-});
+})
+
+app.delete('/quotes/:quoteId', (req, res) => {
+  const quoteId = req.params.quoteId
+  db.collection('quotes').deleteOne({_id : ObjectID(quoteId)}, (err, result) => {
+    if (err) return console.log(err)
+    console.log('delete from database')
+  })
+})
 
 app.put('/quotes', (req, res) => {
   db.collection('quotes')
@@ -56,8 +63,6 @@ app.put('/quotes', (req, res) => {
     upsert: true
   }, (err, result) => {
     if (err) return res.send(err);
-    // res.send(result);
-    console.log(result);
 	res.redirect('/');
   })
 });

@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>List</title>
+    <meta charset="UTF-8">
+    <title>List</title>
 </head>
 <body>
 
-  <div>  
+<div>
     <h1>Formento's App</h1>
     <h2>Replace last quote</h2>
-    <button id="btn-update"> Update last quote :) </button>
-  </div>
+    <button id="btn-update"> Update last quote :)</button>
+</div>
 
-  <form action="/quotes" method="POST">
+<form action="/quotes" method="POST">
     <input type="text" placeholder="Name" name="name" autofocus="true">
     <input type="text" placeholder="Quote" name="quote">
     <button type="submit">Submit</button>
-  </form>
+</form>
 
-  <ul class="quotes">
-  <% for(var i=0; i<quotes.length; i++) {%>
+<ul class="quotes">
+    <% for(var i = 0; i < quotes.length; i++) { %>
     <li class="quote">
-      <span><strong><%= quotes[i].name %></strong></span>
-      <span class="quote-description" ><%= quotes[i].quote %></span>
-      <span><input type="button" class="btn-delete" value="Delete" /></span>
+        <span><strong><%= quotes[i].name %></strong></span>
+        <span class="quote-description"><%= quotes[i].quote %></span>
+        <span><input type="button" data-quote="<%= quotes[i]._id %>" class="btn-delete" value="Delete"/></span>
     </li>
-  <% } %>
-  </ul>
+    <% } %>
+</ul>
 
-  <script src="jquery-3.0.0.min.js"></script>
-  <script src="jquery-ui.min.js"></script>
-  <script src="main.js"></script>
+<script src="lib/jquery-3.0.0.min.js"></script>
+<script src="lib/jquery-ui.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
