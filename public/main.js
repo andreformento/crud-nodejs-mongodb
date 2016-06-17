@@ -1,16 +1,16 @@
 const updateQuote = document.getElementById('btn-update');
 
-updateQuote.addEventListener('click', function () {
-    // Send PUT Request here
-    fetch('quotes', {
-        method: 'put',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({
-            'name': 'new :P',
-            'quote': 'new quote'
-        })
-    })
-});
+// updateQuote.addEventListener('click', function () {
+//     // Send PUT Request here
+//     fetch('quotes', {
+//         method: 'put',
+//         headers: {'Content-Type': 'application/json'},
+//         body: JSON.stringify({
+//             'name': 'new :P',
+//             'quote': 'new quote'
+//         })
+//     })
+// });
 
     //closest
 (function () {
