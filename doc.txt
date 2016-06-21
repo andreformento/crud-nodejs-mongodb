@@ -7,3 +7,5 @@ https://www.airpair.com/javascript/complete-expressjs-nodejs-mongodb-crud-skelet
 Docker
 https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
 
+Docker compose
+https://alexanderzeitler.com/articles/docker-machine-and-docker-compose-developer-workflows/

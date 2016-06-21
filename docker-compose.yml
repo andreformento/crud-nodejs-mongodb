@@ -1,0 +1,16 @@
+db:
+  image: mongo:3.2.7
+  ports:
+   - "27017:27017"
+application:
+  build: .
+  command: npm start
+  ports:
+   - "3000:3000"
+  volumes:
+  - ./:/app
+  links:
+   - db
+  environment:
+   - DB_ADDR=db
+   - DB_PORT=27017

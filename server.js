@@ -1,15 +1,21 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const os = require('os');
 // const db = require('./config/db');
 const mongodb = require('mongodb'); //mongo connection
 const MongoClient = mongodb.MongoClient;
 const ObjectID = require("mongodb").ObjectID;
 const app = express();
 
+const DB_ADDR = process.env.DB_ADDR || 'localhost';
+const DB_PORT = process.env.DB_PORT || 27017;
+const DB_CONNECTION = 'mongodb://' + DB_ADDR + ':' + DB_PORT + '/nodejsmongodb';
 var db;
 
+console.log('v8', DB_CONNECTION);
+
 // DATABASE
-MongoClient.connect('mongodb://localhost/nodejsmongodb', (err, database) => {
+MongoClient.connect(DB_CONNECTION, (err, database) => {
 	if (err) return console.log(err);
 	db = database;
 	app.listen(3000, () => {
