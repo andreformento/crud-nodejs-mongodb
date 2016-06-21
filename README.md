@@ -1,20 +1,36 @@
 # CRUD, Express and MongoDB
 
 ## To run
-### Local (development)
-* `npm install`
-* `npm run dev`
-* Access: `http://localhost:3000`
-
-### Remote (production)
-* `npm install`
-* `npm start`
 
 ### Docker
+##### Requirements
+* Docker (optional)
+
+##### Commands
 * `docker-compose build && docker-compose up`
 
-## Requirements
+### Local (development)
+##### Requirements
 * npmjs
 * NodeJS
 * MongoDB
-* Docker (optional)
+
+##### Commands
+* `npm install`
+* `npm run dev`
+
+### Remote (production)
+##### Requirements
+* npmjs
+* NodeJS
+* MongoDB
+
+##### Commands
+* `npm install`
+* `npm start`
+
+## To access
+[http://localhost:3000](http://localhost:3000)
+
+
+
